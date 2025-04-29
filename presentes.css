@@ -1,0 +1,517 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.presentes {
+    text-align: center;
+    margin: 10px auto;
+    padding: 40px;
+}
+
+.presentes h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #092b69;
+}
+
+.filtro-descricao {
+    font-size: 1rem;
+    color: #555; /* Cor neutra e discreta */
+    margin-bottom: 10px; /* Espaçamento entre a legenda e os botões */
+    text-align: center;
+}
+
+
+.logo img {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    cursor: pointer; /* Mostra um ponteiro ao passar o mouse sobre o logo */
+}
+
+#filtro-preco button {
+    margin: 5px;
+    margin-bottom: 40px;
+    padding: 7px 12px;
+    border: none;
+    border-radius: 15px;
+    background-color: #092b69;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+  
+#filtro-preco button:hover {
+    color: black;
+    background-color: #0adaec;
+}
+
+.btn-voltar {
+    background-color: #092b69; /* Ajuste a cor conforme necessário */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 30px;
+}
+
+.btn-voltar:hover {
+    background-color: #0adaec; /* Cor no hover */
+}
+  
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Limita para exatamente 4 colunas */
+    gap: 30px; /* Espaçamento entre os itens */
+    padding: 0 60px; /* Adiciona espaço nas laterais */
+    box-sizing: border-box; /* Garante que o padding não afete o tamanho do grid */
+}
+
+.produto {
+    display: flex;
+    flex-direction: column; /* Garante alinhamento vertical dos elementos */
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%; /* Ajusta automaticamente o tamanho pelo grid */
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.produto:hover {
+    transform: scale(1.05); /* Zoom ao passar o mouse */
+}
+
+.produto img {
+    width: 100%; /* Ocupa toda a largura disponível do contêiner */
+    height: auto; /* Ajusta a altura automaticamente */
+    aspect-ratio: 1 / 1; /* Define proporção fixa (quadrado) */
+    object-fit: cover; /* Preenche o quadrado sem distorcer a imagem */
+    border-radius: 10px; /* Mantém as bordas arredondadas */
+    margin-bottom: 15px; /* Espaçamento entre imagem e texto */
+}
+
+.produto h2 {
+    font-size: 1.5rem;
+    color: #092b69;
+    margin-bottom: 10px;
+}
+
+.produto p {
+    font-size: 1rem;
+    color: #000000;
+    margin: 5px 0;
+}
+
+.produto .valor {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #092b69;
+    margin-top: 10px; /* Espaçamento entre a descrição e o valor */
+}
+
+.btn-presentear {
+    background-color: #092b69;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-presentear:hover {
+    background-color: #2538de;
+}
+
+.modal {
+    display: none; /* Oculta a modal inicialmente */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-content h2 {
+    font-size: 1.8rem;
+    color: #092b69;
+    margin-bottom: 15px;
+}
+
+.modal-imagem, .modal-qr {
+    max-width: 150px;
+    max-height: 150px;
+    margin: 10px auto;
+}
+
+.modal-valor {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #092b69;
+    margin: 15px 0;
+}
+
+.modal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.qr-loader {
+    text-align: center;
+    font-size: 14px;
+    color: #383636;
+    margin-bottom: 10px;
+}
+
+.modal-qr {
+    max-width: 190px;
+    max-height: 190px;
+}
+
+.modal-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-texto {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.btn-enviar {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+    background-color: #c12e2a;
+}
+
+.btn-pix, .btn-cartao {
+    background-color: #286b2a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-pix, .btn-cartao, .btn-copiar, .btn-enviar {
+    width: 100%; /* Botões mais largos */
+    max-width: 300px;
+    padding: 10px 20px;
+    text-align: center;
+    margin: 10px auto;
+}
+
+/* Botão padrão */
+.btn-copiar {
+    background-color: #16822f; /* Verde padrão */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/* Efeito hover */
+.btn-copiar:hover {
+    background-color: #218838; /* Verde mais escuro */
+}
+
+/* Após copiar o código */
+.btn-copiar.copiado {
+    background-color: #1563bc; /* Azul */
+    font-weight: bold; /* Destaca o texto */
+    color: white;
+}
+
+
+/* Estilo para o botão Voltar no modal de Cartão */
+#btn-voltar-cartao {
+    background-color: #555555; /* Cor de fundo para o botão Voltar */
+    color: white;
+    border: none;
+    padding: 8px 16px; /* Reduz o padding para um tamanho menor */
+    border-radius: 5px;
+    font-size: 0.9rem; /* Tamanho de fonte levemente menor */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 30%; /* Menor largura comparado aos outros botões */
+    max-width: 200px; /* Define uma largura máxima menor */
+    text-align: center;
+    margin: 10px auto; /* Centraliza o botão */
+}
+
+#btn-voltar-cartao:hover {
+    background-color: #444444; /* Efeito de hover */
+}
+
+/* Estilo para o botão Voltar no modal de Pix */
+#btn-voltar-pix {
+    background-color: #555555; /* Cor de fundo para o botão Voltar */
+    color: white;
+    border: none;
+    padding: 8px 16px; /* Reduz o padding para um tamanho menor */
+    border-radius: 5px;
+    font-size: 0.9rem; /* Tamanho de fonte levemente menor */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 30%; /* Menor largura comparado aos outros botões */
+    max-width: 200px; /* Define uma largura máxima menor */
+    text-align: center;
+    margin: 10px auto; /* Centraliza o botão */
+}
+
+#btn-voltar-pix:hover {
+    background-color: #444444; /* Efeito de hover */
+}
+
+
+
+
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #ff0000;
+}
+
+
+/*INICIO DA COMPARAÇÃO*/
+
+/* Menu Lateral */
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    background: #092b69; /* Fundo escuro para o menu */
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+    overflow-y: auto; /* Rolagem se necessário */
+}
+
+/* Parte Superior com Logo */
+.menu-lateral .menu-top {
+    background-color: #13132b; /* Fundo mais escuro para a parte superior */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #3d72d5; /* Linha divisória */
+}
+
+.menu-lateral .menu-top img {
+    width: 120px; /* Tamanho maior do logo */
+    height: auto;
+    object-fit: contain; /* Garante que a imagem não seja cortada */
+}
+
+/* Parte Inferior com Menu */
+.menu-lateral .menu-bottom {
+    flex: 1;
+    background-color: #092b69; /* Cor mais clara */
+    padding: 20px 15px; /* Espaçamento */
+}
+
+.menu-lateral .menu-bottom ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /* Espaçamento maior entre os botões */
+}
+
+.menu-lateral .menu-bottom li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px; /* Área maior de clique */
+    transition: color 0.3s ease, transform 0.2s ease; /* Transição suave */
+}
+
+.menu-lateral .menu-bottom li a:hover {
+    color: #87cefa; /* Azul claro ao passar o mouse */
+    transform: translateX(5px); /* Efeito de deslocamento leve */
+}
+
+/* Abre o Menu */
+.menu-lateral.ativo {
+    left: 0;
+}
+
+
+.hamburger-menu {
+    display: none;
+    font-size: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ffffff !important; /* Garante que a cor será branca */
+    margin-bottom: -5px;
+    outline: none; /* Remove o contorno ao focar */
+    -webkit-appearance: none; /* Remove estilos padrão em navegadores WebKit */
+    -moz-appearance: none; /* Remove estilos padrão em navegadores Firefox */
+    appearance: none; /* Remove estilos padrão em navegadores modernos */
+}
+
+.hamburger-menu svg {
+    fill: #ffffff;
+}
+
+.site-footer {
+    display: flex;
+    align-items: flex-start; /* Posiciona inicialmente no topo */
+    justify-content: center; /* Centraliza horizontalmente */
+    gap: 15px; /* Espaçamento entre o logo e o texto */
+    padding: 10px;
+    background-color: #011b4b;
+    color: white;
+}
+
+.footer-logo img {
+    height: 50px; /* Define uma altura fixa para o logo */
+    width: auto; /* Mantém a proporção */
+}
+
+.site-footer p {
+    margin: 0;
+    font-size: 16px;
+    position: relative; /* Permite ajustes finos */
+    top: 15px; /* Ajuste vertical manual até alinhar com o coração */
+}
+
+.arte-section {
+    text-align: center;
+    margin: 0px 0;
+    margin-top: -20px;
+}
+
+.arte-img {
+    width: 400px; /* Define um tamanho fixo para telas grandes */
+    max-width: 60%; /* Permite que seja responsiva para telas menores */
+    height: auto;
+    margin: 25px auto; /* Centraliza a imagem com margens simétricas */
+    margin-bottom: 35px;
+}
+
+@media (max-width: 1150px) and (min-width: 769px) {
+    .produtos {
+        grid-template-columns: repeat(3, 1fr); /* 2 colunas para tablets */
+        padding: 0 20px; /* Ajusta o espaçamento lateral */
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .produtos {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas para tablets */
+        padding: 0 20px; /* Ajusta o espaçamento lateral */
+    }
+}
+
+/* Para telas menores */
+@media (max-width: 768px) {
+    /* Ajuste do grid dos produtos */
+
+    .arte-section {
+        text-align: center;
+        margin: 0px 0;
+        margin-top: 10px;
+    }
+
+    #filtro-preco button {
+        margin-bottom: 10px;
+    }
+    .produtos {
+        grid-template-columns: 1fr; /* Apenas uma coluna */
+        grid-template-columns: 1fr; /* Apenas uma coluna */
+        padding: 0 10px; /* Reduz o espaçamento lateral */
+    }
+
+    /* Menu responsivo */
+    .menu {
+        display: none; /* Ocultar o menu padrão */
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 70px; /* Ajuste de acordo com a altura do cabeçalho */
+        right: 10px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .site-header .menu {
+        display: none; /* Esconde o menu principal */
+    }
+
+    .hamburger-menu {
+        display: block; /* Mostra o botão hambúrguer */
+    }
+}
+
+

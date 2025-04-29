@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giovanna & Matheus - 🎁</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="presentes.css">
+</head>
+
+<body>
+    <header class="site-header">
+
+        <!-- Logo -->        
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="Logo do Casamento">
+        </a>
+
+        <!-- Menu principal (visível no desktop) -->
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#cerimonial">Local da Cerimônia</a></li>
+                <li><a href="presentes.html">Lista de Presentes</a></li>
+                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSej9wmXSBiVuCNUokeR_Klv0C6lKcdlrMGlooCR-0NlWjXRhw/viewform?usp=dialog" target="_blank">Confirmar Presença</a></li>
+            </ul>
+        </nav>
+    
+        <!-- Botão hamburguer (visível no mobile) -->
+        <button class="hamburger-menu" aria-label="Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 80" width="40" height="40" fill="#ffffff">
+                <rect width="100" height="10"></rect>
+                <rect y="30" width="100" height="10"></rect>
+                <rect y="60" width="100" height="10"></rect>
+            </svg>
+        </button>
+    </header>
+    
+    <!-- Menu lateral (visível somente no mobile) -->
+    <nav class="menu-lateral">
+        <!-- Parte superior com imagem -->
+        <div class="menu-top">
+            <img src="logo.png" alt="Logo do Casamento">
+        </div>
+        
+        <!-- Parte inferior com links -->
+        <div class="menu-bottom">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#cerimonial">Local da Cerimônia</a></li>
+                <li><a href="presentes.html">Lista de Presentes</a></li>
+                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSej9wmXSBiVuCNUokeR_Klv0C6lKcdlrMGlooCR-0NlWjXRhw/viewform?usp=dialog" target="_blank">Confirmar Presença</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+
+    <main>
+        <section class="presentes">
+            <h1>LISTA DE PRESENTES</h1> <!-- 🎁 -->
+            
+            <!-- Filtros por faixa de preço -->
+            <div id="filtro-preco">
+                <p class="filtro-descricao">Clique nos botões para filtrar os itens por faixa de preço:</p><br>
+                <button class="filtro-preco" data-min="0" data-max="99999">Todos</button>
+                <button class="filtro-preco" data-min="200" data-max="500">R$ 200 - R$ 500</button>
+                <button class="filtro-preco" data-min="500" data-max="1000">R$ 500 - R$ 1.000</button>
+                <button class="filtro-preco" data-min="1000" data-max="2000">R$ 1.000 - R$ 2.000</button>
+                <button class="filtro-preco" data-min="2000" data-max="99999">Mais de R$ 2.000</button>
+            </div>
+            
+
+            <section id="arte" class="arte-section">
+                <img src="arte.png" alt="Arte" class="arte-img">
+            </section>   
+    
+            <!-- Lista de produtos -->
+            <div class="produtos"></div>
+
+            <div style="text-align: center; margin: 20px 0;">
+                <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" class="btn-voltar">
+                    Voltar para início
+                </button>
+            </div>
+
+        </section>
+    </main>
+    
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close">&times;</span>
+            <img id="modal-imagem" class="modal-imagem" alt="Imagem do Produto">
+            <h2 id="modal-nome"></h2>
+            <p id="modal-valor" class="modal-valor"></p>
+
+            <div id="modal-cartao" class="modal-body" style="display: none;"></div>
+
+            <div id="modal-inicial" class="modal-body">
+                <button id="btn-pix" class="btn-pix">Pagar com Pix</button>
+                <button id="btn-cartao" class="btn-cartao">Cartão ou Boleto</button>
+            </div>
+    
+            <div id="modal-pix" class="modal-body" style="display: none;">
+                <div id="qr-loader" class="qr-loader">Carregando...</div>
+                <img id="modal-qr" class="modal-qr" alt="QR Code do Pix" style="display: none;">
+                <button id="btn-copiar" class="btn-copiar">Copiar código Pix</button>
+            </div>
+
+        </div>
+    </div>
+    
+
+    <footer class="site-footer">
+        <div class="footer-logo">
+            <img src="logo.png" alt="Logo do Casamento">
+        </div>
+        
+        <p>Site by Giovanna e Matheus</p>
+    </footer>
+    
+
+    <script src="presentes.js"></script>
+    
+</body>
+</html>
