@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giovanna & Matheus - ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+    <header class="site-header">
+
+        <!-- Logo -->        
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="Logo do Casamento">
+        </a>
+    
+        <!-- Menu principal (visível no desktop) -->
+        <nav class="menu">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cerimonial">Local da Cerimônia</a></li>
+                <li><a href="presentes.html">Lista de Presentes</a></li>
+                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSej9wmXSBiVuCNUokeR_Klv0C6lKcdlrMGlooCR-0NlWjXRhw/viewform?usp=dialog" target="_blank">Confirmar Presença</a></li>
+            </ul>
+        </nav>
+    
+        <!-- Botão hamburguer (visível no mobile) -->
+        <button class="hamburger-menu" aria-label="Menu">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 80" width="40" height="40" fill="#ffffff">
+                <rect width="100" height="10"></rect>
+                <rect y="30" width="100" height="10"></rect>
+                <rect y="60" width="100" height="10"></rect>
+            </svg>
+        </button>
+    </header>
+    
+    <!-- Menu lateral (visível somente no mobile) -->
+    <nav class="menu-lateral">
+        <!-- Parte superior com imagem -->
+        <div class="menu-top">
+            <img src="logo.png" alt="Logo do Casamento">
+        </div>
+        
+        <!-- Parte inferior com links -->
+        <div class="menu-bottom">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#cerimonial">Local da Cerimônia</a></li>
+                <li><a href="presentes.html">Lista de Presentes</a></li>
+                <li><a href="https://docs.google.com/forms/d/e/1FAIpQLSej9wmXSBiVuCNUokeR_Klv0C6lKcdlrMGlooCR-0NlWjXRhw/viewform?usp=dialog" target="_blank">Confirmar Presença</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        <section id="home" class="hero-section">
+            <!-- Retângulo azul à esquerda -->
+            <div class="left-panel"></div>
+    
+            <!-- Contêiner do círculo e texto -->
+            <div class="circle-container">
+                <div class="circle">
+                    <img src="abertura.jpg" class="circle-image">
+                </div>
+            </div>
+    
+            <!-- Imagem grande de fundo -->
+            <img src="aberturafiltro.jpg" class="hero-background">
+        </section>
+    
+        <div id="contador" class="contador">
+            <h1>CONTAGEM REGRESSIVA</h1>
+            <div class="contador-grid">
+                <div class="contador-item">
+                    <div class="retangulo" id="dias">
+                        <span class="numero">0</span>
+                        <span class="label">DIAS</span>
+                    </div>
+                </div>
+                <div class="contador-item">
+                    <div class="retangulo" id="horas">
+                        <span class="numero">0</span>
+                        <span class="label">HORAS</span>
+                    </div>
+                </div>
+                <div class="contador-item">
+                    <div class="retangulo" id="minutos">
+                        <span class="numero">0</span>
+                        <span class="label">MINUTOS</span>
+                    </div>
+                </div>
+                <div class="contador-item">
+                    <div class="retangulo" id="segundos">
+                        <span class="numero">0</span>
+                        <span class="label">SEGUNDOS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="data-evento" class="evento-data">
+            <p class="data-texto">27.07.2025 - 11:30h</p>
+            <p class="dia-texto">Domingo</p>
+        </section>
+
+        <!-- Seção para a imagem da arte -->
+        <section id="arte" class="arte-section">
+            <img src="arte.png" alt="Arte" class="arte-img">
+        </section>    
+        
+        <section id="inicial" class="secao-inicial">
+            <p>
+                <span class="texto-destaque">BEM-VINDOS AO NOSSO SITE!</span><br>
+        
+                Este é um site de autoria própria, desenvolvido por nós (próprios noivos), programado com muito carinho e pensado para compartilhar 
+                com vocês as informações mais importantes do nosso grande dia. Dessa forma, no nosso site você irá encontrar:<br><br>
+
+                Informações sobre nós, local do casamento, lista de presentes, formulário para confirmar sua presença e mais! Estamos muito felizes em poder celebrar 
+                esse momento com pessoas tão queridas.<br><br>
+
+                Todos os produtos de nosso site são apenas representações, que serão convertidas em recursos destinados para nossas despesas e planos do casamento.<br><br>
+                
+                Estamos contando os dias para esse momento único e especial ao lado de vocês!<br><br>
+        
+                <span class="obs-destaque">POR FAVOR NÃO DEIXE DE CONFIRMAR SUA PRESENÇA!</span><br>
+                
+                Com carinho,<br>
+                Giovanna e Matheus
+            </p>
+        </section>
+
+        <!-- Campo de Atalhos -->
+        <section id="atalhos" class="atalhos-section">
+            <h2>NAVEGAÇÃO RÁPIDA</h2>
+            <h4>(CLIQUE EM UM BOTÃO)</h4>
+            <div class="atalhos-container">
+                <a href="presentes.html" target="_blank" class="btn-atalho">Lista de Presentes</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSej9wmXSBiVuCNUokeR_Klv0C6lKcdlrMGlooCR-0NlWjXRhw/viewform?usp=dialog" target="_blank" class="btn-atalho">Confirmar Presença</a>
+            </div>
+        </section>
+
+        <!-- Seção para a imagem da arte -->
+        <section id="arte" class="arte-section">
+            <img src="arte.png" alt="Arte" class="arte-img">
+        </section>
+        
+        <section id="o-casal" class="secao-casal">
+            <h2>SOBRE O CASAL</h2>
+            <p>
+                Nossa história teve início em 2015, quando nos conhecemos durante os tempos de escola.
+                O que se iniciou de maneira simples, aos poucos foi se transformando em uma jornada cheia de amor, 
+                aprendizados e momentos inesquecíveis. Agora, estamos prestes a dar o próximo passo na nossa jornada, o casamento.<br><br>
+                É com muita emoção que nos preparamos para celebrar o que construímos ao longo de todos esses anos juntos. 
+                Que este dia seja apenas o começo de uma vida cheia de amor e felicidade !
+            </p>
+        </section>
+    </main>
+    
+        <section id="galeria" class="galeria-fotos">
+            <div class="slider">
+                <button class="arrow left-arrow" aria-label="Foto Anterior">&#10094;</button>
+                <div class="slides">
+                    <img src="foto1.jpg" alt="Foto 1">
+                    <img src="foto2.jpg" alt="Foto 2">
+                    <img src="foto3.jpg" alt="Foto 3">
+                    <img src="foto4.jpg" alt="Foto 4">
+                    <img src="foto5.jpg" alt="Foto 5">
+                </div>
+                <button class="arrow right-arrow" aria-label="Próxima Foto">&#10095;</button>
+            </div>
+
+            <div class="thumbnails">
+                <img src="foto1.jpg" alt="Miniatura 1" data-index="0">
+                <img src="foto2.jpg" alt="Miniatura 2" data-index="1">
+                <img src="foto3.jpg" alt="Miniatura 3" data-index="2">
+                <img src="foto4.jpg" alt="Miniatura 4" data-index="3">
+                <img src="foto5.jpg" alt="Miniatura 5" data-index="4">
+            </div>
+            
+        </section>
+
+        <!-- Seção para a imagem da arte -->
+        <section id="arte2" class="arte-section">
+            <img src="arte.png" alt="Arte" class="arte-img">
+        </section>
+
+        <section id="atalhos" class="atalhos-section">
+            <h2>NAVEGAÇÃO RÁPIDA</h2>
+            <h4>(CLIQUE EM UM BOTÃO)</h4>
+            <div class="atalhos-container">
+                <a href="presentes.html" target="_blank" class="btn-atalho">Lista de Presentes</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSej9wmXSBiVuCNUokeR_Klv0C6lKcdlrMGlooCR-0NlWjXRhw/viewform?usp=dialog" target="_blank" class="btn-atalho">Confirmar Presença</a>
+            </div>
+        </section>
+
+        <section id="cerimonial" class="arte-section">
+            <img src="arte.png" alt="Arte" class="arte-img">
+        </section>
+
+        <section id="local" class="local-cerimonia">
+
+            <section id="informacoes-cerimonia" class="secao-informacoes">
+                <h2>CERIMONIAL</h2>
+                <p>
+                    Será uma imensa alegria compartilhar este momento tão especial ao lado de nossos amigos e familiares, 
+                    no dia em que nossa união será abençoada diante de Deus. <br><br>
+                    A cerimônia será breve e pontual, então pedimos que 
+                    faça o possível para não se atrasar. Sua presença é muito importante para nós, mal podemos esperar 
+                    pela celebração do grande dia. Esperamos por você no dia 27 de julho de 2025, às 11:30 no seguinte local:<br><br>
+
+                    <span class="obs-destaque">Buffet Recanto Callegari</span><br>
+
+                    <span class="obs-destaque">Av. Parque Petrópolis, 365 - Mairiporã (Serra da Cantareira).</span><br>
+                    
+                </p>
+            </section>
+
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <div class="btn-container">
+                <a href="https://www.google.com/maps/place/Recanto+Callegari+-+Buffet+Callegari/@-23.378082,-46.613047,16z/data=!4m6!3m5!1s0x94cef197e3b0343d:0xdcbf23fb7375c553!8m2!3d-23.3780816!4d-46.6130474!16s%2Fg%2F11fzz4vkpc?hl=pt-BR&entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" 
+                target="_blank" 
+                class="btn-google">
+                    <img src="maps.png" alt="Ícone Google Maps" class="icon"> Link no Maps
+                </a>
+            </div>
+
+            <br>
+            <br>
+            
+            
+            <div class="btn-container">
+                <a href="https://waze.com/ul/h6gyg521ub" target="_blank" class="btn-waze">
+                    <img src="waze.png" alt="Ícone Waze" class="icon"> Link no Waze
+                </a>
+            </div>
+            <br>
+            
+            <br>
+
+            <div class="mapa-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3662.2953444319337!2d-46.61534847388905!3d-23.37753050486585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cef197e3b0343d%3A0xdcbf23fb7375c553!2sRecanto%20Callegari%20-%20Buffet%20Callegari!5e0!3m2!1spt-BR!2sbr!4v1733187664451!5m2!1spt-BR!2sbr" 
+                    width="600" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Seção para a imagem da arte -->
+        <section id="arte" class="arte-section">
+            <img src="arte.png" alt="Arte" class="arte-img">
+        </section>
+
+        <section id="traje-evento" class="traje-section">
+            <h2>TRAJE DO EVENTO</h2>
+            <p class="traje-subtexto">O traje deve ser esporte fino. Abaixo temos uma sugestão:</p>
+            <div class="traje-imagem-container">
+                <img src="traje.png" alt="Traje Esporte Fino - Referência" class="traje-img">
+            </div>
+        </section>
+
+        <!-- Seção para a imagem da arte -->
+        <section id="arte" class="arte-section">
+            <img src="arte.png" alt="Arte" class="arte-img">
+        </section>
+
+        <br>
+    </main>
+
+    <script src="script.js"></script>
+
+    <footer class="site-footer">
+        <div class="footer-logo">
+            <img src="logo.png" alt="Logo do Casamento">
+        </div>
+        
+        <p>Site by Giovanna e Matheus</p>
+    </footer>
+    
+    
+</body>
+</html>
